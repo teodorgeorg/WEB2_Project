@@ -1,0 +1,106 @@
+/*Bootstrap min css */
+input {
+    max-width: 25%;
+    margin-right: 200px;
+}
+
+table {
+    max-width: 30%;
+}
+h4{
+    color:rgb(14, 67, 146) !important;
+}
+/* span.itmcnt{
+    color : darkblue !important;
+}
+
+.col-sm-2{
+    text-align:right;
+    padding-right:20px; 
+} */
+
+/* .Employees {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em; */
+  
+  /* .Employees li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    list-style: none;
+    text-align: left;
+  } */
+  /* .employee li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+  }
+  .Employees li:hover {
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+  }
+  .Employees .text {
+    position: relative;
+    top: -3px;
+    text-align: left;
+  } */
+
+
+    .selected {
+        background-color: #CFD8DC !important;
+        color: white; } 
+      
+        p {
+            max-width: 40%;
+    margin-right: 80px;
+    text-align: left;
+        }
+    span {
+        color:  rgb(33, 33, 206) ;
+        font-size : 100%;}
+        
+      
+    .count {
+
+        margin-left: 4%; 
+        font-size: 150%;
+        color : rgb(33, 33, 206) ;
+    }
+    .Addemployee  {
+        max-width: 70%;
+        position : absolute;
+        right : 50px;
+        top : 25%;
+          left:1000px;
+      }
+      .Employees{
+          width: 20%;
+          position : absolute;
+      }
+      .selectedEmployee  {
+          position: absolute;
+          left:400px;
+          max-width: 100%;
+         text-align: center;
+         right :800px;
+    
+      }
+      body{
+          background:rgb(165, 206, 245);
+        }
+       
+  .selectedEmployee * {
+      max-width: 90%;
+      display: inline-block;
+  }
+  .Addemployee input  {
+    max-width: 70%;
+    display: inline-block;
+  }

@@ -1,0 +1,50 @@
+<br>
+<h2>Dashboard</h2>
+<div class="container">
+  <table class="table table-hover">
+    <th>Task</th>
+    <th>Department</th>
+    <th>Nr. of Employees</th>
+    <tr *ngFor="let x of tasks" 
+    [class.selected]="x === selectedTask"
+    (click)="onSelect(x)">
+    <td *ngIf="taskHasDepartment(x.id)">
+        <span class="badge"> {{x.name}} </span> 
+    <td *ngIf="taskHasDepartment(x.id)">
+      {{getDepartmentNameById(getDepartmentFromTask(x.id))}}
+    </td>
+    <td *ngIf="taskHasDepartment(x.id)"> 
+      {{CountEmployeesOnTask(x.id)}} 
+    </td>
+  </tr>
+  </table>
+  <br>
+  <div *ngIf="selectedTask">
+    <div class="container">
+    <table class="table table-hover">
+      <h2>Employees assigned to  {{selectedTask.name}} Task  </h2>
+      <tr *ngFor="let i of getEmployeeNames(selectedTask.id)">
+        <td>
+          {{i}}
+        </td>
+      </tr>
+    </table>
+    </div>
+  </div>
+  <button class="button-tasks-crud" (click)="ngOnInit()">Refresh data</button>
+  <span *ngFor="let i of populatePairing()"></span>
+  <div>
+    <hr>
+    <br><br>
+    <h3>Statistics</h3>
+    <p>Percentage of employees assigned to a task: {{getNumberOfBusyEmployees() / employees.length | percent}}</p>
+    <p>Number of employees: {{employees.length}}</p>
+    <p>Number of tasks: {{tasks.length}}</p>
+    <p>Number of departments: {{departments.length}}</p>
+  </div>
+  <hr>
+  <div>
+<app-dashboard-tasks></app-dashboard-tasks>
+<div>
+  <hr>
+</div>

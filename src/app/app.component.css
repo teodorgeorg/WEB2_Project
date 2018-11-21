@@ -1,0 +1,56 @@
+/*Application-wide Styles*/
+.topbar button{
+  animation: yourAnimation 2.5s FORWARDS 0s linear;
+
+}
+@keyframes yourAnimation{
+  0%{
+      transform: rotate(-180DEG) translateY(0%);
+      opacity: 0;
+      }
+  56%{
+      }
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  margin: 2em;
+}
+
+body, input[text], button {
+  color: #888;
+}
+
+/* everywhere else */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.button:hover {
+  background-color: #2471A3;
+}
+
+.button-navbar
+{
+  background-color: #369;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+} 

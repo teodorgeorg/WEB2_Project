@@ -1,0 +1,83 @@
+﻿<div class="search1">
+<input #search type="text" placeholder="Search..." (keyup)="filterTasks(search.value)">
+</div>
+
+
+<div class="tasks-content">
+  <h2>List of all available tasks</h2>
+  <table class="tasks">
+    <tr class="tasks-row-top">
+      <th class="tasks-column-top" id="tasks-column-top-name">Name</th>
+      <th class="tasks-column-top">Duration (weeks)</th>
+      <th class="tasks-column-top">Budget</th>
+      <th class="tasks-column-top">Deadline</th>
+    </tr>
+    <tr class="tasks-row" 
+        *ngFor="let example of tasks" 
+        [class.selected]="example == selectedTask" 
+        (click)="selectThis(example)">
+      <td class="tasks-column"><p>{{example.name}}</p></td>
+      <td class="tasks-column tasks-duration"><p>{{example.duration | number:'1.2'}}</p></td>
+      <td class="tasks-column-top"><p>{{example.budget | number:'1.0'}}</p></td>
+      <td class="tasks-column"><p>{{example.deadline ? example.deadline : '-'}}</p></td>
+    </tr>
+  </table>
+</div>
+
+<div class="tasks-crudnew-task">
+  <h3>Form to add a new task</h3>
+  <label> New task name
+    <br>
+    <input #newName type="text" placeholder="Name" required>
+  </label>
+    <br>
+  <label> New task duration in weeks
+      <br>
+      <input #newDuration type="number" placeholder="0" required>
+  </label>
+    <br>
+  <label> New task budget
+      <br>
+      <input #newBudget type="number" placeholder="0" required>
+  </label>
+    <br>
+  <label>New task deadline
+    <br>
+    <ngb-datepicker #newDeadline (select)="date = $event"></ngb-datepicker>
+    <br>
+  </label>
+    <br>
+    <button type="button" class="button-tasks-crud" (click)="addTask(newName.value, newDuration.value, newBudget.value, date); newName.value=''; newDuration.value='';newBudget.value='';">New</button>
+</div> 
+
+  <div *ngIf="selectedTask" class="tasks-crud">
+    <h3>Details for selected task "{{selectedTask.name}}"</h3>
+    <label> ID:
+      <br>
+      <input #id type="number" placeholder="0" name="newTaskID" [(ngModel)]="selectedTask.id" >
+    </label>
+    <br>
+    <label> Name: 
+    <br>
+      <input #name type="text" placeholder="Name" name="newTaskName" [(ngModel)]="selectedTask.name" >
+    </label>
+    <br>
+    <label> Duration: 
+    <br>
+      <input #duration type="number" placeholder="0" name="newTaskDuration" [(ngModel)]="selectedTask.duration" >
+    </label>
+    <br>
+    <label> Budget:
+      <br>
+      <input #budget type="number" placeholder="0" name="newTaskBudget" [(ngModel)]="selectedTask.budget" >
+    </label>
+    <br>
+    <label>Deadline: 
+      <br>
+      <input #deadline type="text" placeholder="01-Jan-1990" [(ngModel)]="selectedTask.deadline" >
+    </label>
+  <br>
+      <button class="button-tasks-crud" (click)="updateTasks()">Save changes</button>
+      <button class="button-tasks-crud" (click)="removeTask(selectedTask); selectedTask=null">Delete</button>
+    
+  </div>

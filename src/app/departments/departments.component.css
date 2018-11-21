@@ -1,0 +1,102 @@
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  
+}
+
+.text{
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 15px;
+  font-size: 1.75rem;
+}
+
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.departments {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+
+.departments .text {
+  position: relative;
+  top: -3px;
+}
+
+.details {
+    position: relative;
+    right: 500px;
+    padding-bottom: 10px;
+    color:hsl(203, 64%, 23%);
+}
+
+.newDetails{
+  position: relative;
+  right: 400px;
+  padding-bottom: 10px;
+  color:hsl(203, 64%, 23%);
+}
+
+.button{
+  background-color: #369;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.department-crud{
+  text-align: left;
+  padding-left: 15px;
+  
+  margin-bottom: 20px;
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.button-add-new{
+  background-color: #369;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.table{
+  border: #444;
+  display: inline;
+  text-align: center;
+  
+}
+
+.table1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border: #444;
+  
+  text-align: center;
+  padding-right: 30px;
+  margin-top: 50px;
+}

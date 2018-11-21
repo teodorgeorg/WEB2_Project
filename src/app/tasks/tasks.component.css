@@ -1,0 +1,66 @@
+/* this file is a mess */
+.tasks{
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  text-align: left;
+}
+.tasks td, .tasks th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.tasks-row-top{
+  background-color:rgb(171, 210, 230);
+}
+.tasks-duration{
+  text-align: right;
+}
+tr.tasks-row:hover {
+  color: #607D8B;
+  background-color: #DDD;
+}
+td>p{
+  margin: 2px;
+}
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+h2, h3 {
+  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  text-align: left;
+  margin-left: 15px;
+}
+.tasks-crud{
+  text-align: left;
+  padding-left: 20px;
+}
+.selected {
+  background-color: rgb(51, 107, 131);
+  color: rgb(247, 239, 239);
+}
+.button-tasks-crud
+{
+  background-color: #369;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+} 
+
+.tasks-crudnew-task{
+   max-width: 20%;
+}

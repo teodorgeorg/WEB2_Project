@@ -1,0 +1,20 @@
+<div class="dashboard-task">
+    <h3>Form to add a new task</h3>
+    <label> Task ID
+      <br>
+      <input #taskId type="number" placeholder="0" required>
+    </label>
+      <br>
+    <label> Department ID
+        <br>
+        <input #departmentId type="number" placeholder="0" required>
+    </label>
+      <br>
+    <label> List of employee IDs
+        <br>
+        <input #employees type="text" placeholder="0,0,0" required>
+    </label>
+      <br>
+      <br>
+      <button type="button" class="button-newtask" (click)="addNewTask(taskId.value, departmentId.value, employees.value, date); taskId.value=''; departmentId.value=''; employees.value='';">New</button>
+  </div>
